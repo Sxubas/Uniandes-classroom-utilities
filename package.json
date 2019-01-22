@@ -1,0 +1,10 @@
+{
+  "name": "uniandes-classrooms-utilities",
+  "version": "0.0.1",
+  "description": "Scripts to convert Uniandes course offer to classroom schedules",
+  "author": "Sxubas (ja.manrique@uniandes.edu.co)",
+  "license": "MIT",
+  "dependencies": {
+    "calendar": "^0.1.0"
+  }
+}
