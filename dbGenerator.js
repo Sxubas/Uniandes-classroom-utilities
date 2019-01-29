@@ -51,7 +51,7 @@ const generateDB = () => {
   //Each month
   for (const month of monthRange) {
 
-    let monthWeeks = cal.monthDays(2018, month - 1) //Jan is 0 - Dec is 11
+    let monthWeeks = cal.monthDays(2019, month - 1) //Jan is 0 - Dec is 11
 
     for (const week of monthWeeks) {
 
@@ -59,7 +59,7 @@ const generateDB = () => {
         //If the day is in the month
         if (day !== 0) {
           //Query and write to the DB
-          queryAndWrite(day, month, 18)
+          queryAndWrite(day, month, 19)
         }
       }
     }
@@ -75,10 +75,14 @@ const mergeToArray = () => {
     if (err) throw err;
 
     fileNames.forEach(fileName => {
-      const date = fileName.split('.')[0]
-      let dateData = require('./DB/dates/' + fileName)
-      dateData.date = date
-      mergedArray.push(dateData)
+      if(fileName != 'placeholder'){
+        const date = fileName.split('.')[0]
+        let dateData = require('./DB/dates/' + fileName)
+        dateData.date = date
+        mergedArray.push(dateData)
+      }
+      else console.log('Placeholder');
+      
     });
 
     fs.writeFile('./DB/DB-file.min.json', JSON.stringify(mergedArray), err => {

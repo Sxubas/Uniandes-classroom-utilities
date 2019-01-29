@@ -4,3 +4,4 @@ results.json
 results.min.json
 /DB/*.json
 /DB/dates/*.json
+/data/*.json

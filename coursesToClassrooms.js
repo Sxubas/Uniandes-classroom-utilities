@@ -126,7 +126,7 @@ const extractClassrooms = (courseList) => {
 
       for (const month of monthRange) {
 
-        let monthDays = cal.monthDays(2018, month - 1) //Jan is 0 - Dec is 11
+        let monthDays = cal.monthDays(2019, month - 1) //Jan is 0 - Dec is 11
 
         for (const week of monthDays) {
 
@@ -138,7 +138,7 @@ const extractClassrooms = (courseList) => {
             if (day !== 0) {
 
               //Build dateKey to find date
-              let dateKey = buildDateString(day, month, 18)
+              let dateKey = buildDateString(day, month, 19)
 
               //If it does not exist, create it
               if (!classroom.schedules[dateKey]) {

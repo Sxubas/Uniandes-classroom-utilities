@@ -12,7 +12,7 @@ These scripts are no longer maintained but feel free to use the files generated 
 
 In order to run the scripts, the 'data.rar' file should be decompressed and Node.js should be installed. Then, generating the files requires running the scripts in order:
 
-```shell
+```bash
 node coursesToClassrooms.js
 node dbGenerator.js
 ```
